@@ -8,13 +8,14 @@ const connectDB = require("./config/connect")
 connectDB();
 
 app.use(express.json());
-
+const path = require('path');
 
 app.use('/api/user', require('./routers/user'));
 app.use('/api/subvention', require('./routers/subvention'));
 app.use('/api/type',  require('./routers/type'));
 app.use('/api/msg' , require('./routers/msg'))
 if (process.env.NODE_ENV === "production") {
+
 
     app.use(express.static("client/build"))
     
