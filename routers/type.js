@@ -2,7 +2,7 @@ const express = require('express');
 const isAdmin = require('../Middlewares/isAdmin');
 const { typeRules, validator } = require('../Middlewares/validator');
 const router = express.Router();
-const Type = require('../models/Type');
+const Type = require('../models/type');
 
 
 
